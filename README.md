@@ -1,6 +1,6 @@
 # Hypervisor Mini Project — QEMU/KVM & Libvirt  
 Mata Kuliah: **Sistem Operasi**  
-Dosen Pengampu: **(TULISKAN NAMA DOSEN DI SINI)**  
+Dosen Pengampu: ****  
 
 ---
 
