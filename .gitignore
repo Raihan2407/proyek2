@@ -1,0 +1,35 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Large VM Files
+*.iso
+*.qcow2
+*.img
+*.vmdk
+*.vdi
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sensitive Data
+.env
+*.pem
+*.key
+credentials.json
+
+# Backup Files
+*.xml.backup
+vm-backup/
