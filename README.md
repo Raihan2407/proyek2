@@ -175,8 +175,8 @@ hypervisor-mini-qemu-kvm/
 │   └── Laporan_Minggu_14.pdf
 │
 ├── minggu-15-laporan-akhir/
-│   ├── Laporan_Akhir_Hypervisor_Mini.pdf
-│   └── Slide_Presentasi.pdf
+│   ├── Laporan_Akhir_Proyek_2.pdf
+│   └── PPT.pdf
 │
 ├── .gitignore
 └── README.md
@@ -282,8 +282,8 @@ Average latency:      <0.005 ms
 ---
 
 ### **Minggu 15 - Laporan Akhir & Presentasi**
-- 📄 [Laporan Akhir Lengkap](minggu-15-laporan-akhir/Laporan_Akhir_Hypervisor_Mini.pdf)
-- 🎤 [Slide Presentasi](minggu-15-laporan-akhir/Slide_Presentasi.pdf)
+- 📄 [Laporan Akhir Lengkap](minggu-15-laporan-akhir/Laporan_Akhir_Proyek_2.pdf)
+- 🎤 [Slide Presentasi](minggu-15-laporan-akhir/PPT.pdf)
 
 **Isi Laporan Akhir:**
 - Analisis lengkap hasil benchmark
