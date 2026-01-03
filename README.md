@@ -156,52 +156,143 @@ sysbench memory run
 
 ```
 hypervisor-mini-qemu-kvm/
-├── 01-proposal/
+├── minggu-11-proposal/
 │   └── Proposal_Sistem_Operasi_Proyek_2.pdf
 │
-├── 02-minggu-12-instalasi/
-│   ├── laporan_progres_minggu_12.pdf
-│   └── bukti_kerja_minggu_12.pdf
+├── minggu-12-instalasi/
+│   ├── bukti-kerja/
+│   │   └── bukti_kerja_minggu_12.pdf
+│   └── laporan_progres_minggu_12.pdf
 │
-├── 03-minggu-13-pembuatan-vm/
-│   ├── Laporan_Minggu_13.pdf
-│   └── Bukti_Kerja_Minggu_13.pdf
+├── minggu-13-pembuatan-vm/
+│   ├── bukti-kerja/
+│   │   └── Bukti_Kerja_Minggu_13.pdf
+│   └── Laporan_Minggu_13.pdf
 │
-├── 04-minggu-14-benchmarking/
-│   ├── Laporan_Minggu_14.pdf
-│   └── Bukti_Kerja_Minggu_14.pdf
+├── minggu-14-benchmark/
+│   ├── bukti-kerja/
+│   │   └── Bukti_Kerja_Minggu_14.pdf
+│   └── Laporan_Minggu_14.pdf
 │
-├── 05-laporan-akhir/
-│   └── Laporan_Akhir_Hypervisor_Mini.pdf
+├── minggu-15-laporan-akhir/
+│   ├── Laporan_Akhir_Proyek_2.pdf
+│   └── PPT.pdf
 │
-└── 06-presentasi/
-    ├── Slide_Presentasi_15_Slide.pdf
-    └── Script_Presentasi.md
+├── .gitignore
+└── README.md
 ```
 
 ---
 
 ## 📖 Dokumentasi
 
-### **Minggu 11 - Proposal**
-- 📄 [Proposal Proyek](01-proposal/Proposal_Sistem_Operasi_Proyek_2.pdf)
+### **Minggu 11 - Proposal Proyek**
+- 📄 [Proposal Proyek](minggu-11-proposal/Proposal_Sistem_Operasi_Proyek_2.pdf)
 
-### **Minggu 12 - Instalasi Environment**
-- 📄 [Laporan Progres](02-minggu-12-instalasi/laporan_progres_minggu_12.pdf)
-- 📄 [Bukti Kerja](02-minggu-12-instalasi/bukti_kerja_minggu_12.pdf)
+**Isi Proposal:**
+- Judul: Pembangunan Hypervisor Mini Menggunakan QEMU/KVM dan Libvirt
+- Latar belakang dan rumusan masalah
+- Tujuan dan lingkup pekerjaan
+- Metodologi dan jadwal pelaksanaan
 
-### **Minggu 13 - Pembuatan VM**
-- 📄 [Laporan Progres](03-minggu-13-pembuatan-vm/Laporan_Minggu_13.pdf)
-- 📄 [Bukti Kerja](03-minggu-13-pembuatan-vm/Bukti_Kerja_Minggu_13.pdf)
+---
 
-### **Minggu 14 - Benchmarking**
-- 📄 [Laporan Progres](04-minggu-14-benchmarking/Laporan_Minggu_14.pdf)
-- 📄 [Bukti Kerja](04-minggu-14-benchmarking/Bukti_Kerja_Minggu_14.pdf)
+### **Minggu 12 - Instalasi Environment Virtualisasi**
+- 📄 [Laporan Progres](minggu-12-instalasi/laporan_progres_minggu_12.pdf)
+- 📄 [Bukti Kerja](minggu-12-instalasi/bukti-kerja/bukti_kerja_minggu_12.pdf)
+
+**Kegiatan:**
+- Update dan upgrade sistem
+- Instalasi QEMU, KVM, libvirt, bridge-utils, dan virt-manager
+- Verifikasi dukungan virtualisasi CPU
+- Pemeriksaan ketersediaan akselerasi KVM
+- Pemeriksaan status layanan libvirt
+- Verifikasi group user untuk akses libvirt
+- Pengujian menjalankan virt-manager
+
+**Hasil:**
+- ✅ Seluruh komponen virtualisasi berhasil diinstal
+- ✅ Libvirt berfungsi dengan mode socket activation
+- ✅ Virt-manager dapat berjalan dengan normal
+- ✅ Environment siap untuk pembuatan VM
+
+**Kendala:**
+- ⚠️ Akselerasi KVM tidak tersedia (nested virtualization di VirtualBox)
+- ⚠️ Layanan libvirt menunjukkan status "inactive (dead)" - normal karena socket activation
+
+---
+
+### **Minggu 13 - Pembuatan Virtual Machine**
+- 📄 [Laporan Progres](minggu-13-pembuatan-vm/Laporan_Minggu_13.pdf)
+- 📄 [Bukti Kerja](minggu-13-pembuatan-vm/bukti-kerja/Bukti_Kerja_Minggu_13.pdf)
+
+**Kegiatan:**
+- Pembuatan VM menggunakan virt-manager
+- Pemilihan media instalasi (Ubuntu Server 20.04 LTS ISO)
+- Konfigurasi sumber daya VM:
+  - CPU: 2 cores
+  - Memory: ~2900 MB
+  - Storage: 10 GB
+- Pengaturan urutan boot (SATA CDROM prioritas pertama)
+- Instalasi sistem operasi Ubuntu Server 20.04 LTS
+- Konfigurasi jaringan VM (NAT - 192.168.122.0/24)
+- Instalasi OpenSSH Server
+
+**Hasil:**
+- ✅ VM berhasil dibuat dan dikonfigurasi
+- ✅ Sistem operasi Ubuntu Server 20.04 LTS berhasil diinstal lengkap
+- ✅ VM dapat boot dan berjalan dengan stabil
+- ✅ OpenSSH Server terinstal dan siap digunakan
+- ✅ Jaringan VM berfungsi dengan DHCP otomatis
+
+---
+
+### **Minggu 14 - Benchmarking Performa**
+- 📄 [Laporan Progres](minggu-14-benchmark/Laporan_Minggu_14.pdf)
+- 📄 [Bukti Kerja](minggu-14-benchmark/bukti-kerja/Bukti_Kerja_Minggu_14.pdf)
+
+**Kegiatan:**
+- Instalasi Sysbench sebagai tool benchmark
+- Pengujian performa CPU: `sysbench cpu run`
+- Pengujian performa memori: `sysbench memory run`
+- Dokumentasi hasil pengujian
+- Analisis performa sistem virtual
+
+**Hasil Benchmark CPU:**
+```
+Events per second:    52.39
+Total time:           10.0159s
+Average latency:      18.97 ms
+Min latency:          17.36 ms
+Max latency:          48.65 ms
+```
+
+**Hasil Benchmark Memory:**
+```
+Transfer rate:        179.32 MiB/sec
+Operations/sec:       183,622.55
+Average latency:      <0.005 ms
+```
+
+**Analisis:**
+- VM berjalan stabil selama pengujian
+- Performa CPU dan memori tercatat dengan baik
+- Data siap untuk analisis lebih lanjut pada laporan akhir
+
+---
 
 ### **Minggu 15 - Laporan Akhir & Presentasi**
-- 📄 [Laporan Akhir Lengkap](05-laporan-akhir/Laporan_Akhir_Hypervisor_Mini.pdf)
-- 🎤 [Slide Presentasi (15 slides)](06-presentasi/Slide_Presentasi_15_Slide.pdf)
-- 📝 [Script Presentasi](06-presentasi/Script_Presentasi.md)
+- 📄 [Laporan Akhir Lengkap](minggu-15-laporan-akhir/Laporan_Akhir_Proyek_2.pdf)
+- 🎤 [Slide Presentasi](minggu-15-laporan-akhir/PPT.pdf)
+
+**Isi Laporan Akhir:**
+- Analisis lengkap hasil benchmark
+- Evaluasi overhead virtualisasi:
+  - CPU overhead: 96-97%
+  - Memory overhead: 98-99%
+- Perbandingan dengan performa native
+- Kesimpulan dan rekomendasi
+- Lesson learned dari nested virtualization
 
 ---
 
@@ -264,7 +355,7 @@ Minggu 15: DOCUMENTATION
 4. Kumar, R., & Singh, S. P. (2023). *Performance analysis of virtualization technologies*
 5. Smith, J. E., & Nair, R. (2021). *Virtual machines: Versatile platforms*
 
-**[Daftar Referensi Lengkap](05-laporan-akhir/Laporan_Akhir_Hypervisor_Mini.pdf)**
+**[Daftar Referensi Lengkap](minggu-15-laporan-akhir/Laporan_Akhir_Hypervisor_Mini.pdf)**
 
 ---
 
