@@ -397,7 +397,7 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 **Universitas Maritim Raja Ali Haji**  
 Program Studi Teknik Informatika  
-Batam, Kepulauan Riau, Indonesia
+Tanjungpinang, Kepulauan Riau, Indonesia
 
 🌐 Website: [https://umrah.ac.id](https://umrah.ac.id)
 
