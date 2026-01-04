@@ -416,7 +416,3 @@ Made with ❤️ by Tim Proyek 2 Sistem Operasi 2024/2025
 **Last Updated:** Desember 2025  
 **Version:** 1.0.0  
 **Status:** ✅ Completed
-
-
-
-ini update file readmenya, dan revisi di strtuktur folder, pembambahan folder poster dan file yang bernama poster proyek2.png, jadi foldernya progres, poster, file readme, dan file gitignore.
